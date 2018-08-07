@@ -13,6 +13,7 @@ const styles = {
   },
 };
 
+
 // This component renders the movie poster and some details about the movie
 const PosterCard = ({ classes, posterUrl, movieDetails }) => (
   <div>
@@ -23,6 +24,7 @@ const PosterCard = ({ classes, posterUrl, movieDetails }) => (
           {movieDetails.title}
         </Typography>
         <Typography component="p">{movieDetails.overview}</Typography>
+        <button onClick={() => window.open(`https://www.themoviedb.org/movie/${movieDetails.id}`, '_blank')}>READ MORE</button>
       </CardContent>
       <CardActions>
         {/* TODO */}
